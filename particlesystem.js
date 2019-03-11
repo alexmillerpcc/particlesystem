@@ -12,7 +12,7 @@ function setup(){
 
 
 function draw(){
-	translate(-width/2, -height/2, 0);
+	
 	background(255);
 	for(let i = 0; i < 20; i++){
 		ants[i].move();
@@ -26,8 +26,8 @@ class Ant {
 
   constructor(){
     
-    this.x = random(width);
-    this.y = random(height);
+    this.x = random(-width/2, width/2);
+    this.y = random(-height/2, height/2);
     this.diameter = random(10, 50);
     this.speed = random(2, 5);
   }
@@ -46,14 +46,14 @@ class Ant {
   follow(){
   	if(mouseIsPressed){
   	
-      if(this.x > mouseX){
+      if(this.x > mouseX-width/2){
       	this.x = this.x -this.speed;
-      }else if(this.x < mouseX){
+      }else if(this.x < mouseX-width/2){
       	this.x = this.x + this.speed;
       }
-      if(this.y > mouseY){
+      if(this.y > mouseY-height/2){
       	this.y = this.y -this.speed;
-      }else if(this.y < mouseY){
+      }else if(this.y < mouseY-height/2){
       	this.y = this.y + this.speed;
       }
   	}
