@@ -12,7 +12,7 @@ function setup(){
 
 
 function draw(){
-	translate(-width/2, width/2, 0);
+	translate(-width/2, -height/2, 0);
 	background(255);
 	for(let i = 0; i < 20; i++){
 		ants[i].move();
@@ -25,7 +25,7 @@ function draw(){
 class Ant {
 
   constructor(){
-    translate(-width/2, width/2, 0);
+    
     this.x = random(width);
     this.y = random(height);
     this.diameter = random(10, 50);
