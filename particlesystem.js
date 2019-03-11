@@ -8,7 +8,6 @@ function setup(){
       ants[i] = new Ant;
 	}
 	
-
 }
 
 
@@ -19,9 +18,6 @@ function draw(){
 		ants[i].display();
 		ants[i].follow();
 	}
-
-	
-
 	
 }
 
@@ -47,6 +43,7 @@ class Ant {
 
   follow(){
   	if(mouseIsPressed){
+  	translate(-width/2, width/2, 0);
       if(this.x > mouseX){
       	this.x = this.x -this.speed;
       }else if(this.x < mouseX){
