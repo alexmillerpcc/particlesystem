@@ -33,8 +33,8 @@ class Ant {
   }
 
   move(){
-    //this.x += random(-this.speed, this.speed);
-    //this.y += random(-this.speed, this.speed);
+    this.x += random(-this.speed, this.speed);
+    this.y += random(-this.speed, this.speed);
     if(this.x > width/2-this.diameter){this.x = this.x - 2*this.speed}
     if(this.x < -width/2+this.diameter){this.x = this.x + 2*this.speed}
     if(this.y > height/2-this.diameter){this.y = this.y - 2*this.speed}
