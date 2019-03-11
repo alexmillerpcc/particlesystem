@@ -25,10 +25,9 @@ function draw(){
 class Ant {
 
   constructor(){
-    
-    this.x = random(-width/2, width/2);
-    this.y = random(-height/2, height/2);
     this.diameter = random(10, 50);
+    this.x = random(-width/2+this.diameter, width/2-this.diameter);
+    this.y = random(-height/2+this.diameter, height/2-this.diameter);
     this.speed = random(2, 5);
   }
 
