@@ -24,7 +24,7 @@ function draw(){
 	if (mouseIsPressed){
 		noCursor();
 		texture(berryimg);
-		rect(mouseX, mouseY, 20, 20);
+		rect(mouseX-width/2, mouseY-height/2, 30, 30);
 	}
 }
 
