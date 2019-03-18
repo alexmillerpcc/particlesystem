@@ -14,6 +14,7 @@ function setup(){
 
 
 function draw(){
+	cursor();
 	
 	background(255);
 	for(let i = 0; i < 20; i++){
