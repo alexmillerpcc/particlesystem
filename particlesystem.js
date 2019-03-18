@@ -1,9 +1,11 @@
 let ants = [];
 let antimg;
+let berryimg;
 
 function setup(){
 	createCanvas(800, 600, WEBGL);
 	antimg = loadImage('assets/antpic.png');
+	berryimg = loadImage('assets/berry.png');
 	for(let i = 0; i < 20; i++){
       ants[i] = new Ant;
 	}
@@ -19,7 +21,11 @@ function draw(){
 		ants[i].display();
 		ants[i].follow();
 	}
-	
+	if (mouseIsPressed){
+		noCursor();
+		texture(berryimg);
+		rect(mouseX, mouseY, 20, 20);
+	}
 }
 
 class Ant {
