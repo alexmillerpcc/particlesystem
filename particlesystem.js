@@ -3,10 +3,10 @@ let antimg;
 let berryimg;
 
 function setup(){
-	createCanvas(800, 600, WEBGL);
+	createCanvas(1200, 800, WEBGL);
 	antimg = loadImage('assets/antpic.png');
 	berryimg = loadImage('assets/berry.png');
-	for(let i = 0; i < 20; i++){
+	for(let i = 0; i < 30; i++){
       ants[i] = new Ant;
 	}
 	
@@ -25,17 +25,17 @@ function draw(){
 	if (mouseIsPressed){
 		noCursor();
 		texture(berryimg);
-		rect(mouseX-(width/2)-15, mouseY-(height/2)-15, 30, 30);
+		rect(mouseX-(width/2)-20, mouseY-(height/2)-20, 40, 40);
 	}
 }
 
 class Ant {
 
   constructor(){
-    this.diameter = random(10, 50);
+    this.diameter = random(15, 50);
     this.x = random(-width/2+this.diameter, width/2-this.diameter);
     this.y = random(-height/2+this.diameter, height/2-this.diameter);
-    this.speed = random(2, 5);
+    this.speed = random(2, 4);
   }
 
   move(){
